@@ -1,10 +1,7 @@
-package tests;
+package examples;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.IOUtils;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
 
 import java.io.BufferedReader;
 import java.io.IOException;

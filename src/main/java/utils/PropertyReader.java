@@ -9,7 +9,7 @@ public final class PropertyReader {
     private static final Properties prop = initProperties();
 
     public static final String BROWSER = prop.getProperty("browser");
-    private static final String BASEURL = prop.getProperty("baseUrl"); //? public???
+    public static final String BASEURL = prop.getProperty("baseUrl"); //? public???
 
     private PropertyReader() {}
 
