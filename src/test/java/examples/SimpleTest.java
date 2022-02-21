@@ -2,13 +2,11 @@ package examples;
 
 import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.Test;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
-
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SimpleTest {

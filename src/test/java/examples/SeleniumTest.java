@@ -7,19 +7,15 @@ import pages.AuthorizationPage;
 import pages.HomePage;
 import pages.MyAccountPage;
 import utils.PropertyReader;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SeleniumTest extends TestBase {
     /** ДЗ_lesson_14. Открыть сайт, нажать контакт кнопку, проверить переход на страницу контакты */
     @Test
-    public void UseDriverManager () throws InterruptedException {
+    public void UseDriverManager () {
         driver.get(PropertyReader.BASEURL); //driver.get("http://automationpractice.com/");
         HomePage homePage = new HomePage(driver);
         homePage.checkOnPage(); // на главной странице title = My Store
-        //Assertions.assertTrue(driver.getCurrentUrl().contains("http://automationpractice.com"));
-        //Thread.sleep(1300);
         WebElement contactButton = driver.findElement(By.xpath("//a[@title='Contact us']"));
         if (contactButton.isDisplayed())
             contactButton.click();
