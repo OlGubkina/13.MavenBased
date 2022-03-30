@@ -9,7 +9,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import utils.PropertyReader;
-
 import java.util.concurrent.TimeUnit;
 
 public class TestBase {
@@ -22,15 +21,12 @@ public class TestBase {
         switch (browser) {
             case ("chrome") : {
                 WebDriverManager.chromedriver().setup();
-
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("start-maximized");
                 //chromeOptions.addArguments("version");
                 // посмотреть в гугле опции !!!
-
                 driver = new ChromeDriver(chromeOptions);
                 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
                 break;
             }
             case ("firefox") : {
@@ -42,8 +38,8 @@ public class TestBase {
         }
     }
 
-    @AfterEach
-    public void tearDown() {
-        driver.close(); // После теста закрываем окно браузера
-    }
+//    @AfterEach
+//    public void tearDown() {
+//        driver.close(); // После теста закрываем окно браузера
+//    }
 }
